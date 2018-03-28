@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 import { DATA_AVAILABLE } from "../actions/" //Import the actions types constant we defined in our actions
-
+import login from './login';
 let dataState = { data: [], loading:true };
 
 const dataReducer = (state = dataState, action) => {
@@ -14,9 +14,11 @@ const dataReducer = (state = dataState, action) => {
     }
 };
 
+
 // Combine all the reducers
 const rootReducer = combineReducers({
-    dataReducer
+    dataReducer,
+    login
     // ,[ANOTHER REDUCER], [ANOTHER REDUCER] ....
 })
 

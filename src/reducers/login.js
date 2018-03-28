@@ -2,11 +2,14 @@ import {
     LOGIN,
     LOGIN_SUCCESS,
     REMOTE_CALL_ERROR,
-    RETRY_REMOTE_CALL
+    RETRY_REMOTE_CALL,
+    LOGOUT
 } from "../actions/login";
 
 const initialState = {
-    loggedIn: false
+    loggedIn: false,
+    username: '',
+    password: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -31,6 +34,10 @@ export default function reducer(state = initialState, action) {
         case RETRY_REMOTE_CALL:
             return {
                 loggedIn: true
+            };
+        case LOGOUT:
+            return {
+                loggedIn: false
             };
         default:
             return state;

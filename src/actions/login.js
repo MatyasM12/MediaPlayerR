@@ -1,11 +1,15 @@
 export const LOGIN = 'LOGIN';
-export function login() {
+export function login(username, password) {
     return {type: LOGIN};
 }
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export function loginSuccess() {
     return {type: LOGIN_SUCCESS};
+}
+export const LOGOUT = 'LOGOUT';
+export function logout() {
+    return {type: LOGOUT}
 }
 
 export const REMOTE_CALL_ERROR = 'REMOTE_CALL_ERROR';
